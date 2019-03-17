@@ -3,10 +3,12 @@
 # @Time  : 2019-03-14 20:40
 # @Author: cainjiang
 # @File  : Demo.py
+from pizza import make_pizza as mp
+
+
 def greet_user():
     """显示简单的问候语"""
     print("Hello")
-
 
 age = 23
 message = "Happy " + str(age) + "rd Birthday"
@@ -154,3 +156,4 @@ while 'dog' in pets:
 print(pets)
 
 greet_user()
+mp('mushroms', 'extra cheese')
