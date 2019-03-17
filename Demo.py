@@ -3,6 +3,11 @@
 # @Time  : 2019-03-14 20:40
 # @Author: cainjiang
 # @File  : Demo.py
+def greet_user():
+    """显示简单的问候语"""
+    print("Hello")
+
+
 age = 23
 message = "Happy " + str(age) + "rd Birthday"
 print(message)
@@ -40,6 +45,9 @@ print(bicycles)
 
 bicycles.remove('honda')
 print(bicycles)
+if bicycles:
+    print('列表不是空的')
+    print(bicycles)
 
 for value in range(1, 5):
     if 3 <= value < 5:
@@ -62,3 +70,87 @@ print(pingfang)
 print(pingfang[-3:])
 dimens = (200, 300)
 print(dimens)
+
+alien_0 = {
+    'point': '5',
+    'color': 'green',
+    'favorite': 'green',
+}
+
+alien_1 = {
+    'point': '4',
+    'color': 'red',
+    'favorite': 'green',
+}
+
+aliens = [alien_0, alien_1]
+
+for alien in aliens:
+    print(alien)
+
+print(sorted(alien_0.keys()))
+
+for k, v in alien_0.items():
+    print("\nKey: " + str(k))
+    print("Value: " + str(v))
+
+for k in alien_0.keys():
+    print(k.title())
+
+for v in set(alien_0.values()):
+    print(v)
+
+print(alien_0)
+print(alien_0['color'])
+print(alien_0['point'])
+del alien_0['color']
+
+waixingren = []
+for alien_number in range(30):
+    new_alien = {
+        'point': '4',
+        'color': 'red',
+        'favorite': ['red', 'green', 'blue'],
+        'planet': {
+            'first': '地球',
+            'second': '家园',
+        },
+    }
+    waixingren.append(new_alien)
+for alien in waixingren[:5]:
+    print(alien)
+print("……")
+print("total num of alien: " + str(len(waixingren)))
+
+# input_message = input("请输入信息，我会原样打印出来的：")
+# print(input_message)
+# age = input("年龄：")
+# age = int(age)
+# if age > 19:
+#     print("你已经成年了")
+# else:
+#     print("你还没有成年呢")
+
+current_num = 1
+while current_num <= 5:
+    current_num += 1
+    if current_num == 2:
+        continue
+    print(current_num)
+
+unconfired_users = ['alice', 'brian', 'candace']
+confired_users = []
+while unconfired_users:
+    current_user = unconfired_users.pop()
+    print("Verifying user: " + current_user.title())
+    confired_users.append(current_user)
+print("\nThe following users have been confirmed:")
+for confired_user in confired_users:
+    print(confired_user.title())
+
+pets = ['dog', 'cat', 'dog', 'rabbit']
+while 'dog' in pets:
+    pets.remove('dog')
+print(pets)
+
+greet_user()
