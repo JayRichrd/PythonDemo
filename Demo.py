@@ -3,12 +3,15 @@
 # @Time  : 2019-03-14 20:40
 # @Author: cainjiang
 # @File  : Demo.py
+import matplotlib.pyplot as plt
+
 from pizza import make_pizza as mp
 
 
 def greet_user():
     """显示简单的问候语"""
     print("Hello")
+
 
 age = 23
 message = "Happy " + str(age) + "rd Birthday"
@@ -157,3 +160,17 @@ print(pets)
 
 greet_user()
 mp('mushroms', 'extra cheese')
+
+input_values = [1, 2, 3, 4]
+pingfang = [1, 4, 9, 16]
+plt.title("pingfangshu")
+# plt.plot(input_values, pingfang)
+# plt.xlabel("Value")
+# plt.ylabel("PingFang")
+# plt.tick_params('both')
+
+x_values = list(range(1, 1001))
+y_values = [x ** 2 for x in x_values]
+plt.scatter(x_values, y_values, 20, edgecolors='none', c=y_values)
+plt.axis([0, 1100, 0, 1100000])
+plt.savefig('pingfang.png', bbox_inches='tight')
